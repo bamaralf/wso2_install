@@ -7,6 +7,7 @@ Requirements
 ------------
 It requires that you repack the zip file obtained from http://wso2.com with the source folders placed directly under the root folder instead of product_folder > source folders.
 When you unzip the repacked folder you should get the source folders outside of any folder.
+Observation: This role doesn't encrypt any password, it only install the products on its defaults. 
 
 Role Variables
 --------------
