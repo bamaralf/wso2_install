@@ -1,0 +1,27 @@
+---
+# tasks file for wso2_install
+
+  - name: Creates install directory
+    file: path="{{ wso2_install_path }}/{{ wso2_product_name }}" mode=775 recurse=yes state=directory
+    become_user: "{{ user }}"
+
+# Uncompressing WSO2 zip
+  - name: Uncompressing WSO2 zip file
+    become_user: "{{ user }}"
+    unarchive: 
+      src="{{ wso2_zip_file_location }}" 
+      dest="{{ wso2_install_path }}/{{ wso2_product_name }}" 
+      copy=yes
+
+# Setting permissions to WSO2 scripts
+ 
+  - name: Setting permissions  
+    become_user: "{{ user }}"
+    file:
+      path="{{ wso2_install_path }}/{{ wso2_product_name }}/bin/"
+      mode=775
+      recurse=yes
+      state=directory    
+  
+      
+ 

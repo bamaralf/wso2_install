@@ -1,0 +1,24 @@
+---
+- hosts: "{{ TARGET_HOSTS | default('local') }}"
+  vars:
+    wso2_install_path: /wso2
+    wso2_user: "{{ USER | mandatory }}"
+    user: "{{ wso2_user }}"
+
+###### PRODUCT_FLAG = integrator | api-mgr ##################
+###### PRODUCT_NAME = api-mgr | esb | dss | msg-broker ######
+###### wso2_unbox_name = wsoam | wso2ei #####################
+
+    wso2_product_flag: "{{ PRODUCT_FLAG | mandatory }}"
+    wso2_product_name: "{{ PRODUCT_NAME | mandatory }}"
+
+#############################################################
+
+    wso2_unbox_name: "{{ UNBOX_NAME }}"
+
+    wso2_version: "{{ VERSION | mandatory }}"
+    wso2_product_folder: "{{ wso2_unbox_name }}-{{ wso2_version }}"
+    wso2_zip_filename: "{{ wso2_unbox_name }}-{{ wso2_version }}.zip"
+    wso2_zip_file_location: "{{ role_path }}/files/{{ wso2_zip_filename }}"
+  roles:
+    - { role: wso2_install }
