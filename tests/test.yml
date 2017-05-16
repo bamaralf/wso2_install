@@ -12,7 +12,7 @@
 # with the accordingly PRODUCT_NAME. If you want to install the integrator with all products on the same instance, 
 # you could use "esb" or "dss" as PRODUCT_NAME and you will have the complete integrator install. 
 
-# The "msg-broker" has a separated folder and start scripts that are under the #integrator root folder 
+# The "msg-broker" has a separated folder and start scripts that are under the integrator root folder 
 # and you should use it on PRODUCT_NAME if you want to install specifically it.
 
 ###### wso2_unbox_name = wso2am | wso2ei #####################
