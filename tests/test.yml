@@ -7,15 +7,13 @@
 
 ###### PRODUCT_FLAG = integrator | api-mgr ###################
 ###### PRODUCT_NAME = api-mgr | esb | dss | msg-broker #######
+# Since version 6.0.0 the WSO2 integrator product contains: esb, dss and msg-broker, 
+# but it's possible to install each product on separated instances. If you need to do so, just run the playbook 
+# with the accordingly PRODUCT_NAME. If you want to install the integrator with all products on the same instance, 
+# you could use "esb" or "dss" as PRODUCT_NAME and you will have the complete integrator install. 
 
-# Since version 6.0.0 the WSO2 integrator product contains:
-# esb, dss and msg-broker, but its possible to install each products
-# on separated instances. If you need to do so, just run the playbook 
-# with the accordingly PRODUCT_NAME. If you want to install the 
-# integrator with all products on the same instance, you could use "esb" or "dss"
-# as PRODUCT_NAME an you will have the complete integrator install. The "msg-broker" 
-# has a separated folder and start scripts that are under the integrator root folder
-# and you should use it on PRODUCT_NAME if you want to install specificlly it.
+# The "msg-broker" has a separated folder and start scripts that are under the #integrator root folder 
+# and you should use it on PRODUCT_NAME if you want to install specifically it.
 
 ###### wso2_unbox_name = wso2am | wso2ei #####################
 
