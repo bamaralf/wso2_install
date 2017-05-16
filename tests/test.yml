@@ -7,7 +7,7 @@
 
 ###### PRODUCT_FLAG = integrator | api-mgr ##################
 ###### PRODUCT_NAME = api-mgr | esb | dss | msg-broker ######
-###### wso2_unbox_name = wsoam | wso2ei #####################
+###### wso2_unbox_name = wso2am | wso2ei #####################
 
     wso2_product_flag: "{{ PRODUCT_FLAG | mandatory }}"
     wso2_product_name: "{{ PRODUCT_NAME | mandatory }}"
