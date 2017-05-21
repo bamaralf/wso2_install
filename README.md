@@ -5,6 +5,7 @@ This Ansible role installs WSO2 products from repacked zip files.
 
 Requirements
 ------------
+This role performs the default install proces to WSO2 products: Api-manager and Integrator.
 It requires that you repack the zip file obtained from http://wso2.com with the source folders placed directly under the root folder instead of product_folder > source folders. When you unzip the repacked folder you should get the source folders outside of any folder. Observation: This role doesn't encrypt any password, it only installs the products on its defaults   
 
 Since version 6.0.0 the WSO2 integrator product contains:
